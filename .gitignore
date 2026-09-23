@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Modelos locales
+*.gguf
+*.bin
+*.safetensors
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

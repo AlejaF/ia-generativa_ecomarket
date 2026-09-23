@@ -1,0 +1,556 @@
+
+======================================================================
+EXPERIMENTO - Pedido: ECM10002
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+======================================================================
+
+============================================================
+01_zero_shot.py
+============================================================
+El estado del pedido ECM10002 es "Entregado". Este detalle se encuentra en la información proporcionada, donde se indica que el producto (Bolsa reutilizable de algodón) ha sido entregado y está listo para su uso. La fecha de entrega es 2026-09-19, lo que sugiere que el pedido fue realizado antes de este día. El seguimiento se encuentra en el URL proporcionado, indicando que se puede acceder desde el sitio web de tracking.
+
+
+============================================================
+02_few_shot.py
+============================================================
+Respuesta:
+El estado del pedido ECM10002 es "Entregado".
+
+
+============================================================
+03_delimiters.py
+============================================================
+El estado del pedido ECM10002 está en "Entregado".
+
+
+============================================================
+04_numbered_steps.py
+============================================================
+El estado del pedido ECM10002 está en "Entregado".
+
+
+============================================================
+05_role_and_output.py
+============================================================
+Estado: Entregado
+Entrega estimada: 2026-09-19
+Mensaje: El pedido ECM10002 ha sido entregado con éxito y se estima que estará disponible en su domicilio el día siguiente.
+
+
+======================================================================
+EXPERIMENTO - Pedido: ECM10004
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+======================================================================
+
+============================================================
+01_zero_shot.py
+============================================================
+El estado del pedido ECM10004 es "Retrasado". Esto significa que el pedido ha sido cancelado debido a un problema con la entrega o una falta de información detallada sobre el producto en el seguimiento. La fecha estimada de entrega para este pedido es el 2026-09-28, pero no se ha confirmado si el producto se entregará antes o después de esta fecha. Para obtener más detalles, te recomendaría verificar directamente el seguimiento de la compra o contactar al cliente 004 para obtener más información específica.
+
+
+============================================================
+02_few_shot.py
+============================================================
+Respuesta:
+El estado del pedido ECM10004 es "En proceso". Por favor, revise la información actualizada para obtener más detalles sobre el estado del pedido.
+
+
+============================================================
+03_delimiters.py
+============================================================
+El estado del pedido ECM10004 está en "Retrasado".
+
+
+============================================================
+04_numbered_steps.py
+============================================================
+El estado del pedido ECM10004 está retrocedido. Según el tracking URL proporcionado, se espera una entrega en el día 28 de septiembre de 2026.
+
+
+============================================================
+05_role_and_output.py
+============================================================
+Estado: Retrasado
+Entrega estimada: 2026-09-28
+Mensaje: Estimamos que el pedido ECM10004 se entregará en el siguiente día: 2026-09-28.
+
+
+======================================================================
+EXPERIMENTO - Pedido: ECM10008
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+======================================================================
+
+============================================================
+01_zero_shot.py
+============================================================
+El estado del pedido ECM10008 es "En tránsito". Este indicador indica que el producto está en proceso de envío y no ha sido entregado aún. La fecha estimada de entrega para este pedido es el 2026-09-23.
+
+
+============================================================
+02_few_shot.py
+============================================================
+Respuesta:
+El estado del pedido ECM10008 es en espera. Para obtener más información, te recomiendo verificar la fecha estimada de entrega.
+
+
+============================================================
+03_delimiters.py
+============================================================
+El estado del pedido ECM10008 está en "En tránsito".
+
+
+============================================================
+04_numbered_steps.py
+============================================================
+El estado del pedido ECM10008 está en "En tránsito".
+
+
+============================================================
+05_role_and_output.py
+============================================================
+Estado: En tránsito
+Entrega estimada: 2026-09-23
+Mensaje: Estimado cliente, estamos en proceso de envío del vaso térmico reutilizable ECM10008. La entrega se estima para el día siguiente, 2026-09-23. Por favor, asegúrate de recibirlo antes de esa fecha.
+
+
+======================================================================
+EXPERIMENTO - Pedido: ECM10012
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+======================================================================
+
+============================================================
+01_zero_shot.py
+============================================================
+El estado del pedido ECM10012 es "En preparación". Este indicador indica que el producto está en proceso de producción o preparación para la entrega. La fecha estimada de entrega es 2026-09-27, lo que sugiere que aún no ha sido entregado y se espera que llegue al cliente en ese día.
+
+
+============================================================
+02_few_shot.py
+============================================================
+Respuesta:
+El estado del pedido ECM10012 es en proceso. No hay información específica sobre el estado actual, pero se espera que este pedido esté en camino para su entrega.
+
+
+============================================================
+03_delimiters.py
+============================================================
+El estado del pedido ECM10012 está en "En preparación".
+
+
+============================================================
+04_numbered_steps.py
+============================================================
+El estado del pedido ECM10012 está en "En preparación".
+
+
+============================================================
+05_role_and_output.py
+============================================================
+Estado: En preparación
+Entrega estimada: 2026-09-27
+Mensaje: Estimamos que el pedido ECM10012 se entregará en la fecha de 2026-09-27.
+
+
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+Versión del prompt: v1
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: Aceptada
+Motivo: El producto está sin uso y conserva su empaque original.
+Orientación al cliente: Respetuosamente informándole que su solicitud de devolución ha sido aceptada y que el producto será devuelto con cuidado y precaución durante el proceso de devolución.
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: Aceptada
+Motivo: El producto está completamente sin uso y conserva su empaque original.
+Orientación al cliente: Respetuosamente informándole que su solicitud ha sido aceptada y que su producto será devuelto con todas sus características intactas.
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: Aceptada
+Motivo: El producto está completamente sin uso y conservado su empaque original.
+Orientación al cliente: Respetuosamente informándole que su solicitud de devolución ha sido aceptada y que el producto será devuelto con cuidado y precaución durante el proceso de devolución.
+
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+Versión del prompt: v2
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: [No aceptada]
+Verificación:
+- Plazo: [Cumple / No cumple]
+- Categoría: [Cumple / No cumple]
+- Condición del producto: [No cumple]
+- Empaque original: [No cumple]
+- Daños: [No cumple]
+
+Motivo: [La devolución no cumple con ninguna de las condiciones establecidas en la política de devolución.]
+
+Orientación al cliente: [Respectuoso y empático, manteniendo la calma y la comprensión.]
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: [No aceptada]
+Verificación:
+- Plazo: [Cumple / No cumple]
+- Categoría: [Cumple / No cumple]
+- Condición del producto: [No cumple]
+- Empaque original: [No cumple]
+- Daños: [No cumple]
+
+Motivo: [La categoría del producto no está permitida para devolución]
+
+Orientación al cliente: [Respectuoso y empático]
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: [No aceptada]
+Verificación:
+- Plazo: [Cumple / No cumple]
+- Categoría: [Cumple / No cumple]
+- Condición del producto: [No cumple]
+- Empaque original: [No cumple]
+- Daños: [No cumple]
+
+Motivo: [La camiseta está sin usar y presenta daños ocasionados por el cliente.]
+
+Orientación al cliente: [Respectuosa y empática]
+
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+Versión del prompt: v3
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Decisión: Aceptada
+Razón: Los productos son compatibles con la política de devolución y están listos para devolver.
+Orientación: Respetuosamente informándole sobre la aceptación de la devolución y ofreciéndole la opción de devolverlos.
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Decisión: Aceptada
+Razón: Los productos mencionados en el producto son compatibles con la política de devolución y están listos para devolver.
+Orientación: Respetuosamente informándole sobre la aceptación de la devolución y ofreciéndole la opción de realizarla.
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Decisión: Aceptada
+Razón: Los productos deben estar sin usar y conservar su empaque original.
+Orientación: Respetuosamente informándole sobre las condiciones de devolución y su importancia.
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen/Qwen2.5-0.5B-Instruct
+Versión del prompt: final
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado: [Aceptada]
+Motivo: Los productos deben estar sin usar y conservar su empaque original.
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado: [Aceptada]
+Motivo: Los productos deben estar sin uso y conservar su empaque original. La solicitud debe encontrarse dentro del plazo de 30 días posteriores a la entrega.
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado: [Aceptada]
+Motivo: Los productos deben estar sin usar y conservar su empaque original. La solicitud debe encontrarse dentro del plazo de 30 días posteriores a la entrega.
+
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen/Qwen2.5-1.5B-Instruct
+Versión del prompt: v1
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: Aceptada
+Motivo: El producto está sin usar, conserva su empaque original, y no presenta daños ocasionados por el cliente.
+Orientación al cliente: Para realizar la devolución, por favor sigue estos pasos:
+1. Envía el paquete a nuestro servicio de devoluciones dentro del plazo de 30 días posteriores a la entrega.
+2. Enviar el paquete debajo de tu nombre y dirección de envío original.
+3. Adjunta fotos de la embalaje original y cualquier otro documento necesario para comprobar que el producto está intacto.
+4. Reserva un número de seguimiento para poder verificar el estado del paquete durante todo el proceso.
+5. Una vez recibido el paquete, nuestros técnicos revisarán el producto y le notificarán si se puede devolver.
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: No aceptada
+Motivo: El producto ya ha sido abierto, lo que viola la condición general establecida en la política de devoluciones de EcoMarket.
+Orientación al cliente: Lamento informarte que este producto no está disponible para devolución debido a que ya ha sido abierto. Te recomendamos revisar nuestra página web para encontrar alternativas compatibles. Gracias por tu comprensión.
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Estado de la devolución: Aceptada
+Motivo: El producto está en perfectas condiciones, sigue su empaque original, y no presenta ningún tipo de daño causado por el cliente.
+Orientación al cliente: Para realizar la devolución, por favor envíe un correo electrónico a nuestro servicio al cliente indicando que desea devolver la camiseta reutilizable. En el mensaje, incluya su nombre completo, número de pedido y detalles adicionales sobre cómo deseas proceder (por ejemplo, si prefieres hacerlo en nuestra tienda física o enviarnos directamente). Recuerde que debes cumplir con todos los requisitos establecidos en nuestra política de devoluciones antes de enviar la solicitud. ¡Estamos aquí para asistirte!
+
+
+======================================================================
+EXPERIMENTO - Devoluciones
+Modelo: Qwen2.5-1.5B-Instruct-GGUF-Q4_K_M (llama.cpp)
+Versión del prompt: final
+======================================================================
+
+============================================================
+Caso 1 - Producto dentro de las condiciones
+============================================================
+Producto:
+{'product': 'Audífonos inalámbricos', 'category': 'electronica', 'days_since_delivery': 10, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11118-e6ab7c1a4
+model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Eres un agente de atención al cliente de EcoMarket.
+
+Utiliza únicamente la siguiente política de devoluciones y los datos
+proporcionados del producto. No inventes información.
+
+POLÍTICA DE DEVOLUCIONES:
+POLÍTICA DE DEVOLUCIONES DE ECOMARKET
+Política simulada para fines académicos.
+
+1. PLAZO DE DEVOLUCIÓN
+
+Los clientes pueden solicitar la devolución de un producto dentro de los 30 días calendario posteriores a la entrega.
+
+2. CONDICIONES GENERALES
+
+Para que una devolución sea aceptada ... (truncated)
+Estado: No aceptada
+Motivo: El producto no cumple la condición de conservar su empaque original, ya que el requerimiento es de 30 días posteriores a la entrega.
+
+
+Exiting...
+
+
+============================================================
+Caso 2 - Producto no retornable
+============================================================
+Producto:
+{'product': 'Crema de cuidado personal', 'category': 'higiene personal', 'days_since_delivery': 5, 'condition': 'abierto', 'original_packaging': True}
+
+Respuesta del modelo:
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11118-e6ab7c1a4
+model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Eres un agente de atención al cliente de EcoMarket.
+
+Utiliza únicamente la siguiente política de devoluciones y los datos
+proporcionados del producto. No inventes información.
+
+POLÍTICA DE DEVOLUCIONES:
+POLÍTICA DE DEVOLUCIONES DE ECOMARKET
+Política simulada para fines académicos.
+
+1. PLAZO DE DEVOLUCIÓN
+
+Los clientes pueden solicitar la devolución de un producto dentro de los 30 días calendario posteriores a la entrega.
+
+2. CONDICIONES GENERALES
+
+Para que una devolución sea aceptada ... (truncated)
+Estado: No aceptada
+
+Motivo: El producto se encuentra abierto, lo que no es compatible con la política de devoluciones que dice que se deben conservar en su empaque original.
+
+
+Exiting...
+
+
+============================================================
+Caso 3 - Solicitud fuera del plazo
+============================================================
+Producto:
+{'product': 'Camiseta reutilizable', 'category': 'ropa', 'days_since_delivery': 45, 'condition': 'sin usar', 'original_packaging': True}
+
+Respuesta del modelo:
+Loading model... 
+
+▄▄ ▄▄
+██ ██
+██ ██  ▀▀█▄ ███▄███▄  ▀▀█▄    ▄████ ████▄ ████▄
+██ ██ ▄█▀██ ██ ██ ██ ▄█▀██    ██    ██ ██ ██ ██
+██ ██ ▀█▄██ ██ ██ ██ ▀█▄██ ██ ▀████ ████▀ ████▀
+                                    ██    ██
+                                    ▀▀    ▀▀
+
+build      : b11118-e6ab7c1a4
+model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+ftype      : Q4_K - Medium
+modalities : text
+
+available commands:
+  /exit or Ctrl+C     stop or exit
+  /regen              regenerate the last response
+  /clear              clear the chat history
+  /read <file>        add a text file
+  /glob <pattern>     add text files using globbing pattern
+
+
+
+> Eres un agente de atención al cliente de EcoMarket.
+
+Utiliza únicamente la siguiente política de devoluciones y los datos
+proporcionados del producto. No inventes información.
+
+POLÍTICA DE DEVOLUCIONES:
+POLÍTICA DE DEVOLUCIONES DE ECOMARKET
+Política simulada para fines académicos.
+
+1. PLAZO DE DEVOLUCIÓN
+
+Los clientes pueden solicitar la devolución de un producto dentro de los 30 días calendario posteriores a la entrega.
+
+2. CONDICIONES GENERALES
+
+Para que una devolución sea aceptada ... (truncated)
+Estado: Aceptada
+Motivo: El producto cumple con todas las condiciones de devolución: está sin usar, conserva su empaque original y se encuentra dentro del plazo de 30 días posteriores a la entrega.
+
+
+Exiting...
