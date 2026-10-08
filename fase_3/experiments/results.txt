@@ -411,7 +411,7 @@ Loading model...
                                     ▀▀    ▀▀
 
 build      : b11118-e6ab7c1a4
-model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+model      : qwen2.5-1.5b-instruct-q4_k_m.gguf
 ftype      : Q4_K - Medium
 modalities : text
 
@@ -465,7 +465,7 @@ Loading model...
                                     ▀▀    ▀▀
 
 build      : b11118-e6ab7c1a4
-model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+model      : qwen2.5-1.5b-instruct-q4_k_m.gguf
 ftype      : Q4_K - Medium
 modalities : text
 
@@ -520,7 +520,7 @@ Loading model...
                                     ▀▀    ▀▀
 
 build      : b11118-e6ab7c1a4
-model      : C:\Users\aleja\Documentos\ALEJA\Alejandra\ICESI\SEMESTRE_3\IA GENERATIVA\Talleres\1\ecomarket-ai-support\fase_3\models\qwen2.5-1.5b-instruct-q4_k_m.gguf
+model      : qwen2.5-1.5b-instruct-q4_k_m.gguf
 ftype      : Q4_K - Medium
 modalities : text
 
