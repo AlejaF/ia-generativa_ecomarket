@@ -1,0 +1,197 @@
+{
+  "modelo": "local/Qwen/Qwen2.5-0.5B-Instruct",
+  "fecha": "2026-10-15",
+  "pausa_s": 0,
+  "carga_modelo": {
+    "answer": "¡Hola! ¿Cómo puedo ayudarte hoy?",
+    "error": null,
+    "seconds": 13.3,
+    "llm_calls": 1,
+    "tokens_in": 89,
+    "tokens_out": 11
+  },
+  "preguntas": [
+    {
+      "id": "Q08",
+      "tipo": "rag",
+      "pregunta": "¿Cuánto cuesta el envío estándar?",
+      "esperado": "menciona $12.000",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "El costo del envío estándar es $5.00.",
+          "error": null,
+          "seconds": 13.1,
+          "llm_calls": 1,
+          "tokens_in": 101,
+          "tokens_out": 16,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "El envío estándar cuesta $12.000 COP.",
+          "error": null,
+          "seconds": 71.9,
+          "llm_calls": 1,
+          "tokens_in": 681,
+          "tokens_out": 18,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "El envío estándar cuesta $12.000 COP.",
+          "error": null,
+          "seconds": 71.9,
+          "llm_calls": 1,
+          "tokens_in": 681,
+          "tokens_out": 18,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "D01",
+      "tipo": "ooc",
+      "pregunta": "¿Venden computadores portátiles?",
+      "esperado": "mensaje de rechazo",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Sí, venderemos muchos tipos de computadoras portátiles. ¿En qué te gustaría comprar?",
+          "error": null,
+          "seconds": 21.8,
+          "llm_calls": 1,
+          "tokens_in": 97,
+          "tokens_out": 24,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "El equipo de EcoMarket no vende computadoras portátiles. Estamos especializados en otros productos ecológicos. Te recomiendo buscar en sitios web o tiendas físicas más conocidas para comprar estos dispositivos.",
+          "error": null,
+          "seconds": 32.8,
+          "llm_calls": 1,
+          "tokens_in": 291,
+          "tokens_out": 48,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "El equipo de EcoMarket no vende computadoras portátiles. Estamos especializados en otros productos ecológicos. Te recomiendo buscar en sitios web o tiendas físicas más conocidas para comprar estos dispositivos.",
+          "error": null,
+          "seconds": 32.8,
+          "llm_calls": 1,
+          "tokens_in": 291,
+          "tokens_out": 48,
+          "reutilizada": true,
+          "ok": false
+        }
+      }
+    },
+    {
+      "id": "R1",
+      "tipo": "return",
+      "pregunta": "Quiero devolver unos audífonos, los compré hace 10 días, sin usar y con su empaque original",
+      "esperado": "aceptada y con los pasos de la política (escribir a soporte@…)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "¡Por supuesto! Nos encantaría ayudarte a devolver tus audífonos. Por favor, proporciona la fecha exacta de compra y el número del paquete para que pueda verificarlo.",
+          "error": null,
+          "seconds": 20.8,
+          "llm_calls": 1,
+          "tokens_in": 115,
+          "tokens_out": 44,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "La solicitud de devolución de los audífonos es válida. Para realizarla, asegúrate de tenerlos en buen estado y que no estén utilizados. Por favor, envíales tu solicitud de devolución.",
+          "error": null,
+          "seconds": 50.3,
+          "llm_calls": 1,
+          "tokens_in": 460,
+          "tokens_out": 49,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "¡Gracias por tu solicitud! Estoy muy contento de que te haya gustado nuestro producto. Para poder realizar tu devolución, necesitamos que cumplies con algunas condiciones:\n\n1. Cumplir las condiciones: Necesitas que tengas el producto sin usar y que tenga tu empaque original. Esto significa que debes tener el producto en tu casa antes de hacer la devolución.\n\n2. Conservar el empaque original: El empaque debe mantenerse intacto durante todo el proceso de devolución. No puedes cambiar o modificar el empaque.\n\n3. Plazo de devolución: Tu solicitud debe ser recibida dentro de los 30 días siguientes a la fecha de entrega.\n\nSi cumples con estas condiciones, podrás solicitar nuestra devolución. Por favor, enviaremos tu solicitud y pedimos que lo hagas. ¡Estoy segura de que te daré un reembolso si lo logras!",
+          "error": null,
+          "seconds": 219.5,
+          "llm_calls": 1,
+          "tokens_in": 722,
+          "tokens_out": 199,
+          "ok": false
+        }
+      }
+    },
+    {
+      "id": "R2",
+      "tipo": "return",
+      "pregunta": "Quiero devolver mi crema de cuidado personal, está abierta, la recibí hace 5 días",
+      "esperado": "rechazada (higiene abierta)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "¡Hola! Estoy aquí para ayudarte. ¿En qué puedo ayudarte con tu crema de cuidado personal?",
+          "error": null,
+          "seconds": 35.7,
+          "llm_calls": 1,
+          "tokens_in": 112,
+          "tokens_out": 26,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "La solicitud de devolución de tu crema de cuidado personal es válida. Para realizarla, necesitas presentarla dentro de los 30 días siguientes a la entrega. Asegúrate de que la crema esté completamente limpia y sin uso antes de hacer la solicitud. Si no cumple con estas condiciones, te recomendaría buscar otro producto similar o solicitar un reembolso.",
+          "error": null,
+          "seconds": 115.9,
+          "llm_calls": 1,
+          "tokens_in": 452,
+          "tokens_out": 87,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "El veredicto es RECHAZADA. Los productos de higiene personal que están abiertos no pueden ser devueltos debido a su estado de uso.",
+          "error": null,
+          "seconds": 115.7,
+          "llm_calls": 1,
+          "tokens_in": 566,
+          "tokens_out": 38,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "R3",
+      "tipo": "return",
+      "pregunta": "Quiero devolver una camiseta que recibí hace 45 días, sin usar y con su empaque",
+      "esperado": "rechazada (45 días)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "¡Por supuesto! Nos encantaría ayudarte a devolver tu camiseta. Por favor, proporciona los detalles del producto para que pueda hacerlo de manera más eficiente.",
+          "error": null,
+          "seconds": 37.6,
+          "llm_calls": 1,
+          "tokens_in": 112,
+          "tokens_out": 40,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "La solicitud del cliente es válida. Según la política de devoluciones, la devolución se realizará por el mismo medio de pago utilizado en la compra, en un plazo de 5 a 10 días hábiles. Además, la camiseta fue devuelta dentro de los 30 días posteriores a la entrega.",
+          "error": null,
+          "seconds": 109.6,
+          "llm_calls": 1,
+          "tokens_in": 457,
+          "tokens_out": 73,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "El veredicto es RECHAZADA debido a que han pasado 45 días desde la entrega y el plazo es de 30 días calendario. No cumplimos con las condiciones generales de devolución establecidas en la política de EcoMarket.",
+          "error": null,
+          "seconds": 126.4,
+          "llm_calls": 1,
+          "tokens_in": 573,
+          "tokens_out": 57,
+          "ok": true
+        }
+      }
+    }
+  ],
+  "usage": {
+    "calls": 14,
+    "input_tokens": 4828,
+    "output_tokens": 730
+  }
+}

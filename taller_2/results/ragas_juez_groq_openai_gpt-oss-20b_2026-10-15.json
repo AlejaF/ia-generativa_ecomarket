@@ -1,0 +1,83 @@
+{
+  "modelo": "groq/openai/gpt-oss-20b",
+  "fecha": "2026-10-15",
+  "pausa_s": 45.0,
+  "filas": [
+    {
+      "id": "Q05",
+      "pregunta": "¿Cuánto demora el reembolso y por qué medio me devuelven el dinero?",
+      "respuesta": "El reembolso se procesa en un plazo de 5 a 10 días hábiles y se devuelve por el mismo medio de pago que utilizaste para la compra.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.936570063570361
+    },
+    {
+      "id": "Q08",
+      "pregunta": "¿Cuánto cuesta el envío estándar?",
+      "respuesta": "El envío estándar cuesta $12.000 COP y es gratis si tu compra supera los $150.000 COP.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.9231630561792423
+    },
+    {
+      "id": "Q10",
+      "pregunta": "¿Cuánto tarda el envío express y en qué ciudades está disponible?",
+      "respuesta": "El envío express tarda de 1 a 2 días hábiles y está disponible en Bogotá, Medellín, Cali y Barranquilla.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8845987202894576
+    },
+    {
+      "id": "Q13",
+      "pregunta": "Ya pasó la fecha estimada y mi pedido no llega, ¿qué hago?",
+      "respuesta": "Consulta la fecha estimada actualizada con tu número de seguimiento. Si han pasado más de 3 días hábiles después de esa fecha y el pedido no ha llegado, escribe a soporte@ecomarket.example para que un agente humano revise tu caso.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8900859097049664
+    },
+    {
+      "id": "Q14",
+      "pregunta": "¿Puedo cancelar mi compra si el pedido ya salió?",
+      "respuesta": "No, no puedes cancelar el pedido una vez que ya está En tránsito. Solo se puede cancelar mientras esté En preparación.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8980837917029888
+    },
+    {
+      "id": "Q17",
+      "pregunta": "¿Qué medios de pago aceptan?",
+      "respuesta": "Aceptamos tarjetas de crédito y débito, PSE y Nequi. El cobro se realiza al confirmar la compra.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.897134795901419
+    },
+    {
+      "id": "Q19",
+      "pregunta": "¿Me envían factura de mi compra?",
+      "respuesta": "Sí, EcoMarket envía la factura electrónica al correo con el que se realizó la compra.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8558497527031551
+    },
+    {
+      "id": "Q20",
+      "pregunta": "¿Hasta qué hora atiende una persona del servicio al cliente?",
+      "respuesta": "Atiende de lunes a viernes de 8:00 a.m. a 6:00 p.m. (hora de Colombia).",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8166056825414169
+    },
+    {
+      "id": "Q22",
+      "pregunta": "¿Cuántas horas de batería tienen los audífonos inalámbricos?",
+      "respuesta": "Tienen hasta 20 horas de batería.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.8796384663495953
+    },
+    {
+      "id": "Q26",
+      "pregunta": "¿Cómo debo lavar los productos de bambú?",
+      "respuesta": "Para lavar los productos de bambú, lávalos a mano con agua tibia y jabón suave. Sécalos de inmediato y evita sumergirlos por tiempo prolongado. No son aptos para lavavajillas.",
+      "faithfulness": 1.0,
+      "response_relevancy": 0.9007163856830281
+    }
+  ],
+  "faithfulness_media": 1.0,
+  "response_relevancy_media": 0.8882446624625631,
+  "tokens_llm_del_chat": {
+    "entrada": 5616,
+    "salida": 754
+  }
+}

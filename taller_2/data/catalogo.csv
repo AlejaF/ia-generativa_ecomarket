@@ -1,0 +1,22 @@
+sku,producto,categoria,material,descripcion,precio_cop,devolvible
+ECO-001,Botella reutilizable de acero,accesorios reutilizables,acero inoxidable,"Botella de 750 ml libre de BPA con tapa de rosca.",59900,si
+ECO-002,Bolsa reutilizable de algodón,accesorios reutilizables,algodón,"Bolsa de tela lavable para las compras, con capacidad aproximada de 10 kg.",18900,si
+ECO-003,Cepillo dental de bambú,higiene personal,bambú,"Cepillo dental de mango de bambú con cerdas suaves.",9900,solo_sin_abrir
+ECO-004,Set de cubiertos reutilizables,hogar,acero inoxidable,"Tenedor, cuchillo y cuchara con estuche de tela para llevar.",34900,si
+ECO-005,Shampoo sólido,higiene personal,ingredientes naturales,"Barra de shampoo de 80 g sin empaque plástico.",27900,solo_sin_abrir
+ECO-006,Camiseta de algodón orgánico,ropa,algodón orgánico,"Camiseta de corte unisex disponible en tallas S a XL.",49900,si
+ECO-007,Kit de bolsas reutilizables,accesorios reutilizables,algodón y malla,"Kit de 5 bolsas para frutas, verduras y compras.",29900,si
+ECO-008,Vaso térmico reutilizable,accesorios reutilizables,acero inoxidable,"Vaso térmico de 450 ml con tapa.",45900,si
+ECO-009,Jabón artesanal,higiene personal,aceites vegetales,"Barra de jabón artesanal de 100 g.",14900,solo_sin_abrir
+ECO-010,Cuaderno de papel reciclado,hogar,papel reciclado,"Cuaderno de 80 hojas con tapa de cartón reciclado.",16900,si
+ECO-011,Platos de bambú,hogar,bambú,"Set de 4 platos de bambú.",38900,si
+ECO-012,Botella de vidrio reutilizable,accesorios reutilizables,vidrio borosilicato,"Botella de 500 ml con funda protectora de silicona.",42900,si
+ECO-013,Toallas de algodón orgánico,hogar,algodón orgánico,"Set de 2 toallas de baño.",69900,si
+ECO-014,Esponja vegetal biodegradable,hogar,fibra vegetal,"Pack de 3 esponjas de fibra vegetal para la cocina.",12900,si
+ECO-015,Cubiertos de bambú,hogar,bambú,"Set de 4 cubiertos de bambú.",19900,si
+ECO-016,Velas de cera de soja,hogar,cera de soja,"Pack de 2 velas aromáticas de cera de soja.",32900,si
+ECO-017,Audífonos inalámbricos,electrónica,plástico reciclado,"Audífonos Bluetooth con carcasa de plástico reciclado y hasta 20 horas de batería.",149900,si
+ECO-018,Crema de cuidado personal,higiene personal,ingredientes naturales,"Crema hidratante de 100 ml.",24900,solo_sin_abrir
+ECO-019,Camiseta reutilizable,ropa,algodón reciclado,"Camiseta de algodón reciclado disponible en tallas S a XL.",44900,si
+ECO-020,Taza personalizada con grabado,hogar,cerámica,"Taza de cerámica con el nombre del cliente grabado. Es un producto personalizado.",39900,no
+ECO-021,Granola orgánica,alimentos perecederos,avena y frutos secos,"Bolsa de 400 g de granola orgánica. Es un producto perecedero.",21900,no

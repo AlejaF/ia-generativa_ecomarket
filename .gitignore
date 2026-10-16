@@ -22,3 +22,6 @@ env/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+.env
+chroma_db/
+.pytest_cache/

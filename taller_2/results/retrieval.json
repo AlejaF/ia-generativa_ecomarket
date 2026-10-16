@@ -1,0 +1,80 @@
+{
+  "metricas": {
+    "total": {
+      "n": 29,
+      "hit@1": 0.896551724137931,
+      "hit@4": 0.9655172413793104,
+      "mrr": 0.9252873563218391
+    },
+    "politica": {
+      "n": 7,
+      "hit@1": 1.0,
+      "hit@4": 1.0,
+      "mrr": 1.0
+    },
+    "faq": {
+      "n": 14,
+      "hit@1": 0.8571428571428571,
+      "hit@4": 1.0,
+      "mrr": 0.9166666666666666
+    },
+    "envios": {
+      "n": 1,
+      "hit@1": 0.0,
+      "hit@4": 0.0,
+      "mrr": 0.0
+    },
+    "catalogo": {
+      "n": 7,
+      "hit@1": 1.0,
+      "hit@4": 1.0,
+      "mrr": 1.0
+    }
+  },
+  "fallos": [
+    {
+      "id": "Q12",
+      "pregunta": "¿Qué significa que mi pedido esté retrasado?",
+      "esperadas": [
+        "faq::FAQ05",
+        "envios::estados-del-pedido"
+      ],
+      "posicion": 2,
+      "recuperados": [
+        "faq::FAQ06",
+        "faq::FAQ05",
+        "envios::pedidos-retrasados",
+        "envios::estados-del-pedido"
+      ]
+    },
+    {
+      "id": "Q16",
+      "pregunta": "¿Cómo puedo rastrear mi pedido?",
+      "esperadas": [
+        "faq::FAQ04",
+        "envios::estados-del-pedido"
+      ],
+      "posicion": 3,
+      "recuperados": [
+        "faq::FAQ06",
+        "envios::pedidos-retrasados",
+        "faq::FAQ04",
+        "faq::FAQ05"
+      ]
+    },
+    {
+      "id": "Q18",
+      "pregunta": "¿Puedo pagar cuando me entreguen el pedido?",
+      "esperadas": [
+        "envios::medios-de-pago"
+      ],
+      "posicion": null,
+      "recuperados": [
+        "envios::cancelaciones-y-cambios-de-direccion",
+        "faq::FAQ07",
+        "envios::pedidos-retrasados",
+        "envios::metodos-y-tiempos-de-envio"
+      ]
+    }
+  ]
+}

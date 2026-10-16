@@ -1,0 +1,65 @@
+{
+  "fragmentacion": {
+    "estructura": {
+      "fragmentos": 52,
+      "n": 29,
+      "hit@1": 0.896551724137931,
+      "hit@4": 0.9655172413793104,
+      "mrr": 0.9252873563218391,
+      "hit@4_por_azar": 0.11686690591355894,
+      "caracteres_enviados_por_consulta": 1109.2068965517242,
+      "pct_del_corpus_enviado": 8.07283039702856,
+      "preguntas_con_fuente_valida": 29
+    },
+    "tamaño fijo 1000/0": {
+      "fragmentos": 15,
+      "n": 29,
+      "hit@1": 0.8620689655172413,
+      "hit@4": 0.9655172413793104,
+      "mrr": 0.8994252873563218,
+      "hit@4_por_azar": 0.382266009852217,
+      "caracteres_enviados_por_consulta": 3452.9655172413795,
+      "pct_del_corpus_enviado": 27.34805573611104,
+      "preguntas_con_fuente_valida": 29
+    },
+    "tamaño fijo 500/80": {
+      "fragmentos": 36,
+      "n": 29,
+      "hit@1": 0.8620689655172413,
+      "hit@4": 0.9655172413793104,
+      "mrr": 0.9137931034482759,
+      "hit@4_por_azar": 0.1671592775041051,
+      "caracteres_enviados_por_consulta": 1449.8275862068965,
+      "pct_del_corpus_enviado": 11.290612773202216,
+      "preguntas_con_fuente_valida": 29
+    }
+  },
+  "solapamiento": {
+    "(a) todo": {
+      "fragmentos": 52,
+      "n": 12,
+      "hit@1": 0.75,
+      "hit@4": 0.9166666666666666,
+      "mrr": 0.8194444444444443,
+      "hit@4_por_azar": 0.14328808446455507,
+      "caracteres_enviados_por_consulta": 1159.5,
+      "pct_del_corpus_enviado": 8.43886462882096,
+      "preguntas_con_fuente_valida": 12
+    },
+    "(b) sin FAQ duplicadas": {
+      "fragmentos": 41,
+      "n": 12,
+      "hit@1": 0.75,
+      "hit@4": 0.9166666666666666,
+      "mrr": 0.8333333333333334,
+      "hit@4_por_azar": 0.09756097560975607,
+      "caracteres_enviados_por_consulta": 1226.9166666666667,
+      "pct_del_corpus_enviado": 11.444050617168797,
+      "preguntas_con_fuente_valida": 12
+    }
+  },
+  "duplicados_juntos": {
+    "preguntas de envíos/pagos/pedidos": "12/12",
+    "las 29 preguntas 'in'": "13/29"
+  }
+}

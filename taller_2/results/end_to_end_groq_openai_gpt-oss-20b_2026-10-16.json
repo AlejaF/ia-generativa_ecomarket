@@ -1,0 +1,405 @@
+{
+  "modelo": "groq/openai/gpt-oss-20b",
+  "fecha": "2026-10-16",
+  "pausa_s": 20.0,
+  "carga_modelo": null,
+  "preguntas": [
+    {
+      "id": "Q08",
+      "tipo": "rag",
+      "pregunta": "¿Cuánto cuesta el envío estándar?",
+      "esperado": "menciona $12.000",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "El envío estándar cuesta 5 € para pedidos superiores a 50 €. Si tu compra es menor, el precio es 7 €. Puedes ver el detalle en la sección de pagos al finalizar tu compra.",
+          "error": null,
+          "seconds": 2.6,
+          "llm_calls": 1,
+          "tokens_in": 148,
+          "tokens_out": 62,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "El envío estándar cuesta $12.000 COP y es gratis si tu compra supera los $150.000 COP. (Fuentes: faq::FAQ02, envios::costos-de-envio)",
+          "error": null,
+          "seconds": 16.7,
+          "llm_calls": 1,
+          "tokens_in": 629,
+          "tokens_out": 69,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "El envío estándar cuesta $12.000 COP y es gratis si tu compra supera los $150.000 COP. (Fuentes: faq::FAQ02, envios::costos-de-envio)",
+          "error": null,
+          "seconds": 16.7,
+          "llm_calls": 1,
+          "tokens_in": 629,
+          "tokens_out": 69,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "Q14",
+      "tipo": "rag",
+      "pregunta": "¿Puedo cancelar mi compra si el pedido ya salió?",
+      "esperado": "solo en preparación",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Sí, puedes cancelar tu compra aunque el pedido ya haya salido. Envíanos un mensaje con tu número de pedido y te indicaremos si el envío ya está en tránsito. Si es así, te ayudaremos a devolver el producto y a procesar el reembolso. Si el pedido aún no se ha enviado, lo cancelamos de inmediato. ¡Avísanos y lo resolvemos!",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 153,
+          "tokens_out": 99,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No, no puedes cancelar el pedido una vez que ya está En tránsito. Solo se puede cancelar mientras esté En preparación. (Fuentes: faq::FAQ07, envios::cancelaciones-y-cambios-de-direccion)",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 623,
+          "tokens_out": 83,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "No, no puedes cancelar el pedido una vez que ya está En tránsito. Solo se puede cancelar mientras esté En preparación. (Fuentes: faq::FAQ07, envios::cancelaciones-y-cambios-de-direccion)",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 623,
+          "tokens_out": 83,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "Q18",
+      "tipo": "rag",
+      "pregunta": "¿Puedo pagar cuando me entreguen el pedido?",
+      "esperado": "no hay pago contra entrega",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Claro, puedes pagar en el momento de la entrega. Solo ten a mano tu método de pago y el número de pedido para que el repartidor lo registre. ¡Gracias por comprar con EcoMarket!",
+          "error": null,
+          "seconds": 0.8,
+          "llm_calls": 1,
+          "tokens_in": 152,
+          "tokens_out": 61,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 637,
+          "tokens_out": 59,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 637,
+          "tokens_out": 59,
+          "reutilizada": true,
+          "ok": false
+        }
+      }
+    },
+    {
+      "id": "Q28",
+      "tipo": "rag",
+      "pregunta": "¿Puedo devolver la taza que tiene mi nombre grabado?",
+      "esperado": "no (personalizado)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Claro, puedes devolverla. Solo ten en cuenta que las tazas personalizadas tienen un plazo de devolución de 14 días desde la compra y deben estar en su estado original. Si la taza está sin usar y con el embalaje, envíanos un mensaje con tu número de pedido y te indicamos el proceso.",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 154,
+          "tokens_out": 89,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No puedo decidir si la devolución es posible sin más información. Por favor dime:\n\n1. ¿Cuánto tiempo ha pasado desde que recibiste la taza?\n2. ¿La taza está sin usar y con su empaque original?\n\nCon esos datos podré decirte si puedes devolverla y, si es posible, los pasos a seguir.",
+          "error": null,
+          "seconds": 0.9,
+          "llm_calls": 1,
+          "tokens_in": 545,
+          "tokens_out": 136,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "Lo siento, pero no podemos aceptar la devolución de la taza con tu nombre grabado. Los productos personalizados no pueden devolverse.",
+          "error": null,
+          "seconds": 1.8,
+          "llm_calls": 1,
+          "tokens_in": 633,
+          "tokens_out": 53,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "F03",
+      "tipo": "ooc",
+      "pregunta": "¿Quién ganó el último mundial de fútbol?",
+      "esperado": "mensaje de rechazo",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Argentina ganó el último mundial de fútbol, el de 2022 en Qatar.",
+          "error": null,
+          "seconds": 1.0,
+          "llm_calls": 1,
+          "tokens_in": 150,
+          "tokens_out": 46,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.1,
+          "llm_calls": 0,
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.1,
+          "llm_calls": 0,
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "D01",
+      "tipo": "ooc",
+      "pregunta": "¿Venden computadores portátiles?",
+      "esperado": "mensaje de rechazo",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Hola! En EcoMarket nos enfocamos en productos ecológicos como alimentos, cosméticos naturales, artículos de higiene sostenible y utensilios de cocina eco‑friendly. No vendemos computadores portátiles. Si buscas algo relacionado con la tecnología verde, dime y te ayudo a encontrar alternativas más sostenibles. ¡Saludos!",
+          "error": null,
+          "seconds": 0.8,
+          "llm_calls": 1,
+          "tokens_in": 148,
+          "tokens_out": 90,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.7,
+          "llm_calls": 1,
+          "tokens_in": 317,
+          "tokens_out": 51,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.7,
+          "llm_calls": 1,
+          "tokens_in": 317,
+          "tokens_out": 51,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "D04",
+      "tipo": "ooc",
+      "pregunta": "¿Los electrónicos tienen garantía de dos años?",
+      "esperado": "mensaje de rechazo",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Sí, todos los productos electrónicos que vendemos en EcoMarket vienen con una garantía de dos años. Si tienes algún problema con tu compra, avísanos y te ayudaremos a resolverlo.",
+          "error": null,
+          "seconds": 0.8,
+          "llm_calls": 1,
+          "tokens_in": 150,
+          "tokens_out": 63,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.2,
+          "llm_calls": 0,
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "error": null,
+          "seconds": 0.2,
+          "llm_calls": 0,
+          "tokens_in": 0,
+          "tokens_out": 0,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "R1",
+      "tipo": "return",
+      "pregunta": "Quiero devolver unos audífonos, los compré hace 10 días, sin usar y con su empaque original",
+      "esperado": "aceptada y con los pasos de la política (escribir a soporte@…)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "¡Hola! Claro, podemos ayudarte con la devolución. Los audífonos están dentro del plazo de 30 días y están sin usar con el empaque original, así que todo está bien. Por favor, envíanos una foto del producto y el número de pedido, y te indicaremos el proceso para que lo devuelvas. ¡Gracias por confiar en EcoMarket!",
+          "error": null,
+          "seconds": 0.8,
+          "llm_calls": 1,
+          "tokens_in": 165,
+          "tokens_out": 99,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "¡Hola! Sí, puedes devolver los audífonos.  \nPara hacerlo, sigue estos pasos:\n\n1. Envía una solicitud de devolución a través de tu cuenta en EcoMarket.  \n2. Empaza los audífonos en su empaque original y asegúrate de que estén sin usar.  \n3. Incluye el número de pedido y la razón de la devolución.  \n4. Envía el paquete a la dirección que te indique el servicio de atención al cliente.  \n\nUna vez que EcoMarket reciba y revise el producto, el reembolso se realizará por el mismo medio de pago que usaste en la compra, en un plazo de 5 a 10 días hábiles.",
+          "error": null,
+          "seconds": 1.9,
+          "llm_calls": 1,
+          "tokens_in": 469,
+          "tokens_out": 182,
+          "ok": false
+        },
+        "con_rag_reglas": {
+          "answer": "¡Hola! Tu solicitud de devolución ha sido aceptada porque cumples con todas las condiciones: el pedido está dentro de los 30 días, el producto está sin usar y conserva su empaque original.\n\nPasos generales:\n1. Escribe a soporte@ecomarket.example indicando el número de seguimiento del pedido y el producto que deseas devolver.\n2. Espera la confirmación de EcoMarket, que incluirá las instrucciones de envío.\n3. Empaca el producto sin usar, dentro de su empaque original.\n4. Entrega el paquete a la transportadora indicada por EcoMarket. El costo del envío de la devolución lo asume EcoMarket.\n\nReembolso:\nUna vez que EcoMarket reciba y revise el producto, el reembolso se realizará por el mismo medio de pago utilizado en la compra, en un plazo de 5 a 10 días hábiles.",
+          "error": null,
+          "seconds": 1.4,
+          "llm_calls": 1,
+          "tokens_in": 698,
+          "tokens_out": 203,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "R2",
+      "tipo": "return",
+      "pregunta": "Quiero devolver mi crema de cuidado personal, está abierta, la recibí hace 5 días",
+      "esperado": "rechazada (higiene abierta)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Hola, entiendo que quieres devolver la crema. Como está abierta y la recibiste hace 5 días, no podemos aceptarla como devolución. Si tienes algún problema con el producto, avísame y vemos cómo solucionarlo.",
+          "error": null,
+          "seconds": 0.9,
+          "llm_calls": 1,
+          "tokens_in": 160,
+          "tokens_out": 68,
+          "ok": true
+        },
+        "con_rag": {
+          "answer": "No, no se puede devolver la crema de cuidado personal porque es un producto de higiene personal que ya ha sido abierto. La política de devoluciones no permite la devolución de este tipo de artículos.",
+          "error": null,
+          "seconds": 1.1,
+          "llm_calls": 1,
+          "tokens_in": 457,
+          "tokens_out": 84,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "Lo siento, pero no podemos aceptar la devolución de tu crema de cuidado personal. Los productos de higiene personal que hayan sido abiertos no pueden devolverse.",
+          "error": null,
+          "seconds": 0.9,
+          "llm_calls": 1,
+          "tokens_in": 551,
+          "tokens_out": 54,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "R3",
+      "tipo": "return",
+      "pregunta": "Quiero devolver una camiseta que recibí hace 45 días, sin usar y con su empaque",
+      "esperado": "rechazada (45 días)",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Lo siento, pero la política de devoluciones de EcoMarket permite devolver productos dentro de los 30 días posteriores a la compra. Como han pasado 45 días, no podemos aceptar la devolución. Si lo deseas, puedo ofrecerte un cupón de descuento para tu próxima compra o ayudarte a encontrar otro producto que te interese. ¿Qué prefieres?",
+          "error": null,
+          "seconds": 0.5,
+          "llm_calls": 1,
+          "tokens_in": 161,
+          "tokens_out": 96,
+          "ok": true
+        },
+        "con_rag": {
+          "answer": "No, no puedo aceptar la devolución. El plazo máximo para devolver un producto es de 30 días calendario desde la entrega, y tú recibiste la camiseta hace 45 días. Si necesitas ayuda con otra cosa, avísame.",
+          "error": null,
+          "seconds": 0.7,
+          "llm_calls": 1,
+          "tokens_in": 465,
+          "tokens_out": 72,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "Lo siento, pero no podemos aceptar la devolución de la camiseta. Han pasado 45 días desde la entrega y el plazo máximo para solicitar una devolución es de 30 días calendario.",
+          "error": null,
+          "seconds": 0.9,
+          "llm_calls": 1,
+          "tokens_in": 563,
+          "tokens_out": 62,
+          "ok": true
+        }
+      }
+    },
+    {
+      "id": "P1",
+      "tipo": "order",
+      "pregunta": "¿Dónde está mi pedido ECM10004?",
+      "esperado": "Retrasado, 2026-09-28",
+      "condiciones": {
+        "sin_rag": {
+          "answer": "Hola, tu pedido ECM10004 está en tránsito y debería llegar en 2-3 días hábiles. Puedes seguir el número de seguimiento en la sección de pedidos de tu cuenta. Si necesitas más ayuda, avísame.",
+          "error": null,
+          "seconds": 0.9,
+          "llm_calls": 1,
+          "tokens_in": 150,
+          "tokens_out": 70,
+          "ok": false
+        },
+        "con_rag": {
+          "answer": "Estado: Retrasado\nEntrega estimada: 2026-09-28\nMensaje: Lamentamos la demora. Puedes seguir el envío en https://tracking.ecomarket.example/ECM10004",
+          "error": null,
+          "seconds": 1.9,
+          "llm_calls": 1,
+          "tokens_in": 288,
+          "tokens_out": 59,
+          "ok": true
+        },
+        "con_rag_reglas": {
+          "answer": "Estado: Retrasado\nEntrega estimada: 2026-09-28\nMensaje: Lamentamos la demora. Puedes seguir el envío en https://tracking.ecomarket.example/ECM10004",
+          "error": null,
+          "seconds": 1.9,
+          "llm_calls": 1,
+          "tokens_in": 288,
+          "tokens_out": 59,
+          "reutilizada": true,
+          "ok": true
+        }
+      }
+    }
+  ],
+  "usage": {
+    "calls": 24,
+    "input_tokens": 8566,
+    "output_tokens": 2010
+  }
+}

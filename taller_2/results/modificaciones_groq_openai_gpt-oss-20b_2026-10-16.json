@@ -1,0 +1,237 @@
+{
+  "fecha": "2026-10-16",
+  "k": [
+    {
+      "k": 1,
+      "hit@k": 0.896551724137931,
+      "mrr": 0.896551724137931,
+      "caracteres_por_consulta": 290.6551724137931
+    },
+    {
+      "k": 2,
+      "hit@k": 0.9310344827586207,
+      "mrr": 0.9137931034482759,
+      "caracteres_por_consulta": 535.5862068965517
+    },
+    {
+      "k": 4,
+      "hit@k": 0.9655172413793104,
+      "mrr": 0.9252873563218391,
+      "caracteres_por_consulta": 1109.2068965517242
+    },
+    {
+      "k": 6,
+      "hit@k": 0.9655172413793104,
+      "mrr": 0.9252873563218391,
+      "caracteres_por_consulta": 1695.8275862068965
+    }
+  ],
+  "modelo": "groq/openai/gpt-oss-20b",
+  "prompt": {
+    "filas": [
+      {
+        "id": "D01",
+        "pregunta": "¿Venden computadores portátiles?",
+        "top1": 0.822,
+        "pasa_umbral": true,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No, no vendemos computadores portátiles.",
+          "llm": true,
+          "respondida": true
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D02",
+        "pregunta": "¿Tienen tienda física en Bogotá?",
+        "top1": 0.824,
+        "pasa_umbral": true,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No, EcoMarket no tiene tienda física en Bogotá. Solo realizamos envíos dentro de Colombia. (Fuentes: envios::cobertura)",
+          "llm": true,
+          "respondida": true
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D03",
+        "pregunta": "¿Tienen programa de puntos o descuentos para clientes frecuentes?",
+        "top1": 0.818,
+        "pasa_umbral": false,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D04",
+        "pregunta": "¿Los electrónicos tienen garantía de dos años?",
+        "top1": 0.811,
+        "pasa_umbral": false,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D05",
+        "pregunta": "¿Cuál es el teléfono de servicio al cliente?",
+        "top1": 0.816,
+        "pasa_umbral": false,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D06",
+        "pregunta": "¿Puedo pagar mi compra en cuotas?",
+        "top1": 0.842,
+        "pasa_umbral": true,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No, EcoMarket no ofrece la opción de pagar en cuotas.",
+          "llm": true,
+          "respondida": true
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D07",
+        "pregunta": "¿Venden ropa para niños?",
+        "top1": 0.829,
+        "pasa_umbral": true,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No, no tenemos ropa para niños.",
+          "llm": true,
+          "respondida": true
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      },
+      {
+        "id": "D08",
+        "pregunta": "¿Tienen aplicación móvil?",
+        "top1": 0.798,
+        "pasa_umbral": false,
+        "actual": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_instruccion_de_rechazo": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": false,
+          "respondida": false
+        },
+        "sin_umbral": {
+          "respuesta": "No cuento con las herramientas para atender esta solicitud. Si lo deseas, puedo derivarte con un agente humano: escribe a soporte@ecomarket.example.",
+          "llm": true,
+          "respondida": false
+        }
+      }
+    ],
+    "actual": 0,
+    "sin_instruccion_de_rechazo": 4,
+    "sin_umbral": 0
+  },
+  "secciones": [
+    {
+      "pregunta": "Quiero devolver unos audífonos, los compré hace 10 días, sin usar y con su empaque original",
+      "con_secciones_7_y_8": {
+        "respuesta": "¡Hola! Tu solicitud de devolución ha sido aceptada porque cumples con todas las condiciones: el pedido está dentro de los 30 días, el producto está sin usar y conserva su empaque original.\n\nPasos generales:\n1. Escribe a soporte@ecomarket.example indicando el número de seguimiento del pedido y el producto que deseas devolver.\n2. Espera la confirmación de EcoMarket, que incluirá las instrucciones de envío.\n3. Empaca el producto sin usar, dentro de su empaque original.\n4. Entrega el paquete a la transportadora indicada por EcoMarket. El costo del envío de la devolución lo asume EcoMarket.\n\nReembolso:\nUna vez que EcoMarket reciba y revise el producto, el reembolso se realizará por el mismo medio de pago utilizado en la compra, en un plazo de 5 a 10 días hábiles.",
+        "paso_1_soporte": true,
+        "paso_4_transportadora": true,
+        "reembolso_5_a_10_dias": true
+      },
+      "sin_secciones_7_y_8": {
+        "respuesta": "¡Hola! Tu solicitud de devolución ha sido aceptada porque cumples con todas las condiciones: el producto está dentro de los 30 días, sin usar y con el empaque original.\n\nPasos generales:\n1. Empaqueta el producto en su embalaje original y asegúrate de incluir todos los accesorios y la documentación.\n2. Envía el paquete a la dirección de devolución indicada en tu cuenta de EcoMarket.\n3. Una vez que recibamos y revisemos el producto, procesaremos el reembolso.\n\nReembolso:\nEl reembolso se realizará por el mismo medio de pago que usaste para la compra, en un plazo de 5 a 10 días hábiles. ¡Gracias por confiar en EcoMarket!",
+        "paso_1_soporte": false,
+        "paso_4_transportadora": false,
+        "reembolso_5_a_10_dias": true
+      }
+    },
+    {
+      "pregunta": "Quiero devolver mi botella reutilizable de acero, la recibí hace 20 días, sin usar y con su empaque original",
+      "con_secciones_7_y_8": {
+        "respuesta": "¡Hola! Tu solicitud de devolución ha sido aceptada porque cumples con todas las condiciones: la botella está sin usar, con su empaque original y dentro de los 30 días posteriores a la entrega.\n\nPasos generales:\n1. Escribe a soporte@ecomarket.example indicando el número de seguimiento del pedido y el producto que deseas devolver.\n2. Espera la confirmación de EcoMarket, que incluirá las instrucciones de envío.\n3. Empaca el producto sin usar, dentro de su empaque original.\n4. Entrega el paquete a la transportadora indicada por EcoMarket. El costo del envío de la devolución lo asume EcoMarket.\n\nReembolso: una vez que EcoMarket reciba y revise el producto, el reembolso se realizará por el mismo medio de pago utilizado en la compra, en un plazo de 5 a 10 días hábiles.",
+        "paso_1_soporte": true,
+        "paso_4_transportadora": true,
+        "reembolso_5_a_10_dias": true
+      },
+      "sin_secciones_7_y_8": {
+        "respuesta": "¡Hola! Tu solicitud de devolución ha sido aceptada porque cumples con todas las condiciones: la botella está sin usar, con el empaque original y dentro de los 30 días posteriores a la entrega.\n\nPasos generales:\n1. Empaqueta el producto en su empaque original y colócalo en un sobre frágil.\n2. Adjunta el formulario de devolución que te enviamos por correo.\n3. Envía el paquete a la dirección indicada en el formulario.\n4. Una vez que EcoMarket reciba y revise el producto, procesaremos el reembolso.\n\nEl reembolso se realizará por el mismo medio de pago que usaste para la compra, en un plazo de 5 a 10 días hábiles. ¡Gracias por confiar en EcoMarket!",
+        "paso_1_soporte": false,
+        "paso_4_transportadora": false,
+        "reembolso_5_a_10_dias": true
+      }
+    }
+  ]
+}

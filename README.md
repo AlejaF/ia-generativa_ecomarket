@@ -1,152 +1,34 @@
-# EcoMarket AI Support
+# EcoMarket — IA Generativa
 
-Proyecto de asistencia inteligente para atención al cliente de la empresa EcoMarket.
+Talleres de IA generativa aplicados a la atención al cliente de EcoMarket, una tienda de e-commerce ficticia. Cada taller está en su
+propia carpeta y se ejecuta desde ella.
 
-El proyecto explora el uso de modelos de lenguaje (LLM) y técnicas de ingeniería de prompts para resolver dos casos de uso:
+| Taller | Carpeta | Tema |
+|---|---|---|
+| Taller 1 | [`taller_1/`](taller_1/) | Ingeniería de prompts con un modelo local pequeño: consulta de pedidos y evaluación de devoluciones |
+| Taller 2 | [`taller_2/`](taller_2/) | Sistema RAG con LangChain para atender cualquier solicitud o decir que no tiene las herramientas |
 
-- Consulta del estado de pedidos.
-- Evaluación de solicitudes de devolución de productos.
+## Taller 1
 
-## Estructura del proyecto
+Documentación en [`taller_1/fase_1_2.md`](taller_1/fase_1_2.md) y [`taller_1/fase_3/analisis_fase_3.md`](taller_1/fase_3/analisis_fase_3.md);
+instrucciones de ejecución en [`taller_1/README.md`](taller_1/README.md) (los comandos de la Fase 3 se ejecutan desde `taller_1/fase_3`).
 
-```text
-ecomarket-ai-support/
-├── fase_1_2.md
-├── fase_3/
-│   ├── data/
-│   │   └── pedidos.json
-│   ├── experiments/
-│   │   ├── prompt_evolution.py
-│   │   ├── return_experiment.py
-│   │   └── results.txt
-│   ├── knowledge/
-│   │   └── politica_devoluciones.txt
-│   ├── prompts/
-│   │   ├── orders/
-│   │   └── returns/
-│   ├── src/
-│   │   ├── model.py
-│   │   ├── order_status.py
-│   │   └── returns.py
-│   └── analisis_fase_3.md
-├── requirements.txt
-└── README.md
-```
+## Taller 2 — dónde está cada parte
 
-## Fases del proyecto
+| Parte del taller | Dónde |
+|---|---|
+| Fase 1: selección de componentes (embeddings y base de datos vectorial) | [`taller_2/fase_1_2.md`](taller_2/fase_1_2.md), sección «Fase 1» |
+| Fase 2: base de conocimiento (documentos, chunking e indexación) | [`taller_2/fase_1_2.md`](taller_2/fase_1_2.md), sección «Fase 2» |
+| Fase 3: explicación del código, experimentos y limitaciones | [`taller_2/fase_3.md`](taller_2/fase_3.md) |
+| Fase 3: código | [`taller_2/src/`](taller_2/src/) |
+| Cómo ejecutarlo (con clave de Groq propia o sin clave) | [`taller_2/README.md`](taller_2/README.md) |
+| Resultados de la evaluación y experimentos de modificación | [`taller_2/resultados.md`](taller_2/resultados.md) y [`taller_2/results/`](taller_2/results/) |
 
-### Fases 1 y 2
+Resumen para ejecutarlo (detalles, requisitos y alternativas en [`taller_2/README.md`](taller_2/README.md)):
 
-Las fases iniciales del proyecto se encuentran documentadas en `fase_1_2.md`.
-
-### Fase 3
-
-La Fase 3 corresponde a la aplicación práctica de técnicas de ingeniería de prompts para dos casos de uso:
-
-1. Consulta del estado de pedidos.
-2. Evaluación de solicitudes de devolución de productos.
-
-La documentación, metodología, experimentos, resultados, análisis y conclusiones se encuentran en `fase_3/analisis_fase_3.md`.
-
-## Modelo principal
-
-Para la implementación final se utiliza:
-
-**Qwen/Qwen2.5-0.5B-Instruct**
-
-El modelo se ejecuta localmente mediante `Transformers` y CPU.
-
-Durante la Fase 3 también se realizaron experimentos con modelos de mayor tamaño y con una versión cuantizada ejecutada mediante `llama.cpp`. Estos experimentos se conservaron como parte de la comparación y análisis de resultados.
-
-Los archivos de los modelos no se incluyen en el repositorio debido a su tamaño.
-
-## Instalación
-
-Se recomienda utilizar un entorno virtual de Python.
-
-### Crear el entorno virtual
-
-```bash
-python -m venv .venv
-```
-
-### Instalar las dependencias
-
-```bash
+```powershell
+cd taller_2
 pip install -r requirements.txt
+python -m src.ingest
+python -m src.app
 ```
-
-## Ejecución
-
-Los comandos relacionados con la Fase 3 deben ejecutarse desde la carpeta `fase_3`.
-
-### Consulta del estado de un pedido
-
-El número de seguimiento se proporciona desde la terminal.
-
-```bash
-python -m src.order_status ECM10004
-```
-
-El número de seguimiento puede reemplazarse por cualquier pedido disponible en `fase_3/data/pedidos.json`.
-
-### Experimento de evolución de prompts para pedidos
-
-El experimento permite evaluar las diferentes versiones de prompts utilizadas para la consulta del estado de los pedidos.
-
-```bash
-python -m experiments.prompt_evolution ECM10004
-```
-
-### Experimento de devoluciones
-
-Para ejecutar el experimento de las diferentes versiones de prompts para devoluciones:
-
-```bash
-python -m experiments.return_experiment
-```
-
-Los resultados generados por los experimentos se almacenan en `fase_3/experiments/results.txt`.
-
-## Datos y conocimiento
-
-### Datos de pedidos
-
-La información utilizada para las consultas de estado de pedidos se encuentra en `fase_3/data/pedidos.json`.
-
-El archivo contiene los pedidos utilizados como base de pruebas para el proyecto.
-
-### Política de devoluciones
-
-La política utilizada como fuente de conocimiento para evaluar las solicitudes de devolución se encuentra en `fase_3/knowledge/politica_devoluciones.txt`.
-
-## Ingeniería de prompts
-
-Los prompts están organizados según el caso de uso:
-
-```text
-fase_3/prompts/orders/
-fase_3/prompts/returns/
-```
-
-La carpeta `orders` contiene las diferentes versiones utilizadas para experimentar con la consulta del estado de pedidos.
-
-La carpeta `returns` conserva las diferentes versiones desarrolladas durante la experimentación de las devoluciones.
-
-Esta organización permite mantener la trazabilidad de la evolución de los prompts y conservar los experimentos realizados.
-
-## Resultados
-
-Los resultados obtenidos durante los experimentos se conservan sin modificar en `fase_3/experiments/results.txt`.
-
-El análisis y comparación de estos resultados se encuentra en `fase_3/analisis_fase_3.md`.
-
-## Reproducibilidad
-
-El proyecto está diseñado para ejecutarse localmente utilizando Python y CPU.
-
-El modelo principal corresponde a `Qwen/Qwen2.5-0.5B-Instruct`.
-
-Los tiempos de ejecución pueden variar dependiendo de los recursos disponibles, especialmente al utilizar modelos de mayor tamaño.
-
-Los archivos de los modelos no se incluyen en el repositorio. El código, los prompts, los datos de prueba, los resultados y la documentación se encuentran disponibles para revisar la metodología y reproducir los experimentos.

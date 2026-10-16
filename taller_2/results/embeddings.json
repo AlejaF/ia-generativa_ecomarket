@@ -1,0 +1,36 @@
+{
+  "con prefijos": {
+    "paráfrasis": 0.8998042281416079,
+    "sin relación": 0.8191173134451087,
+    "brecha": 0.08068691469649913,
+    "n": 29,
+    "hit@1": 0.896551724137931,
+    "hit@4": 0.9655172413793104,
+    "mrr": 0.9252873563218391,
+    "puntaje_top1_medio": 0.887138749837651
+  },
+  "sin prefijos": {
+    "paráfrasis": 0.9183153143357682,
+    "sin relación": 0.8449073308740042,
+    "brecha": 0.07340798346176403,
+    "n": 29,
+    "hit@1": 0.7931034482758621,
+    "hit@4": 0.9655172413793104,
+    "mrr": 0.8735632183908045,
+    "puntaje_top1_medio": 0.8971478408355005
+  },
+  "escala_response_relevancy": {
+    "mezclado (como RAGAS)": {
+      "misma pregunta (techo)": 0.9459750091751579,
+      "paráfrasis": 0.8854801130092743,
+      "suelo, mismo dominio": 0.811092197398794,
+      "suelo, fuera de dominio": 0.7723055116721389
+    },
+    "simétrico (query vs query)": {
+      "misma pregunta (techo)": 1.0000000402297613,
+      "paráfrasis": 0.8998042281416079,
+      "suelo, mismo dominio": 0.8151267765333404,
+      "suelo, fuera de dominio": 0.7673288708669052
+    }
+  }
+}

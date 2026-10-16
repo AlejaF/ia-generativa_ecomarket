@@ -1,0 +1,86 @@
+[
+  {
+    "id": "FAQ01",
+    "categoria": "envios",
+    "pregunta": "¿Cuánto tarda en llegar mi pedido?",
+    "respuesta": "El envío estándar tarda de 3 a 5 días hábiles y el envío express de 1 a 2 días hábiles en Bogotá, Medellín, Cali y Barranquilla. Estos plazos se cuentan desde que el pedido sale de preparación, que toma hasta 1 día hábil. La fecha estimada de entrega aparece en el seguimiento del pedido."
+  },
+  {
+    "id": "FAQ02",
+    "categoria": "envios",
+    "pregunta": "¿Cuánto cuesta el envío?",
+    "respuesta": "El envío estándar cuesta $12.000 COP y es gratis en compras desde $150.000 COP. El envío express cuesta $20.000 COP y siempre tiene costo."
+  },
+  {
+    "id": "FAQ03",
+    "categoria": "envios",
+    "pregunta": "¿Hacen envíos internacionales?",
+    "respuesta": "No. Por ahora EcoMarket solo realiza envíos dentro de Colombia."
+  },
+  {
+    "id": "FAQ04",
+    "categoria": "pedidos",
+    "pregunta": "¿Cómo hago seguimiento a mi pedido?",
+    "respuesta": "Con el número de seguimiento, que tiene el formato ECM seguido de 5 dígitos (por ejemplo, ECM10001). Puedes consultarlo en el enlace de seguimiento que recibes en el correo de confirmación o pedírselo al asistente."
+  },
+  {
+    "id": "FAQ05",
+    "categoria": "pedidos",
+    "pregunta": "¿Qué significan los estados de mi pedido?",
+    "respuesta": "En preparación: EcoMarket está empacando el pedido y aún no sale. En tránsito: el pedido va en camino con la transportadora. Retrasado: el pedido presenta una novedad y se atrasó frente a la fecha prevista; la fecha estimada se actualiza en el seguimiento. Entregado: el pedido ya fue recibido."
+  },
+  {
+    "id": "FAQ06",
+    "categoria": "pedidos",
+    "pregunta": "Mi pedido está retrasado, ¿qué debo hacer?",
+    "respuesta": "Consulta la fecha estimada actualizada con tu número de seguimiento. Si pasan más de 3 días hábiles después de esa fecha y el pedido no ha llegado, escribe a soporte@ecomarket.example para que un agente humano revise tu caso."
+  },
+  {
+    "id": "FAQ07",
+    "categoria": "pedidos",
+    "pregunta": "¿Puedo cancelar mi pedido?",
+    "respuesta": "Solo mientras el pedido esté en estado En preparación. Cuando pasa a En tránsito ya no se puede cancelar; en ese caso, al recibirlo puedes solicitar una devolución según la política de devoluciones."
+  },
+  {
+    "id": "FAQ08",
+    "categoria": "pedidos",
+    "pregunta": "¿Puedo cambiar la dirección de entrega?",
+    "respuesta": "Solo mientras el pedido esté en estado En preparación, escribiendo a soporte@ecomarket.example con tu número de seguimiento y la nueva dirección."
+  },
+  {
+    "id": "FAQ09",
+    "categoria": "devoluciones",
+    "pregunta": "¿Cuánto tiempo tengo para devolver un producto?",
+    "respuesta": "Tienes 30 días calendario posteriores a la entrega. El producto debe estar sin usar y conservar su empaque original. Consulta la política de devoluciones para ver qué productos no se pueden devolver."
+  },
+  {
+    "id": "FAQ10",
+    "categoria": "pagos",
+    "pregunta": "¿Qué medios de pago aceptan?",
+    "respuesta": "Tarjetas de crédito y débito, PSE y Nequi. El cobro se realiza al confirmar la compra."
+  },
+  {
+    "id": "FAQ11",
+    "categoria": "pagos",
+    "pregunta": "¿Emiten factura?",
+    "respuesta": "Sí. EcoMarket envía la factura electrónica al correo con el que se realizó la compra."
+  },
+  {
+    "id": "FAQ12",
+    "categoria": "productos",
+    "pregunta": "¿De qué materiales están hechos los productos?",
+    "respuesta": "Los productos de EcoMarket se fabrican con materiales como bambú, algodón orgánico, acero inoxidable, vidrio, papel reciclado y cera de soja. El material de cada producto aparece en el catálogo."
+  },
+  {
+    "id": "FAQ13",
+    "categoria": "productos",
+    "pregunta": "¿Cómo cuido los productos de bambú?",
+    "respuesta": "Lávalos a mano con agua tibia y jabón suave, sécalos de inmediato y evita sumergirlos por tiempo prolongado. No son aptos para lavavajillas."
+  },
+  {
+    "id": "FAQ14",
+    "categoria": "atencion",
+    "pregunta": "¿Cómo puedo hablar con una persona?",
+    "respuesta": "Escribe a soporte@ecomarket.example. El equipo humano atiende de lunes a viernes de 8:00 a. m. a 6:00 p. m. (hora de Colombia). El asistente virtual responde las 24 horas y escala a un agente humano las quejas, los problemas técnicos y los casos que no puede resolver."
+  }
+]
