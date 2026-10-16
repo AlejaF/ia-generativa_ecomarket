@@ -205,5 +205,5 @@ evitan pasos inventados. Las cifras salen de muestras pequeñas (entre 2 y 29 pr
 - **Dependencia externa.** Con Groq, la pregunta y los fragmentos salen a un tercero (los embeddings y la base vectorial no) y hay límites
   de cuota; si la API falla, el sistema informa el error y no cambia de modelo en silencio.
 - **No se evaluó** la alternativa de meter todos los documentos (los 52 fragmentos suman 13.740 caracteres) en el prompt, viable en este corpus pero no escalable.
-- **Supuestos:** solo CPU; el profesor ejecuta con su propia clave de Groq o sin clave (modelo local, lento y de baja calidad);
+- **Supuestos:** solo CPU; la persona ejecuta con su propia clave de Groq o sin clave (modelo local, lento y de baja calidad);
   los pedidos se consultan por número exacto; las claves viven solo en `.env`, que no se sube al repositorio.
